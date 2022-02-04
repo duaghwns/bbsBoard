@@ -1,13 +1,20 @@
 package com.duaghwns.bbsBoard.web;
 
-import org.springframework.stereotype.Controller;
+import com.duaghwns.bbsBoard.web.dto.IndexResponseDto;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class IndexController {
 
-    @GetMapping("/")
+    @GetMapping("/index")
     public String index(){
-        return "index";
+        return "indexdddddd";
+    }
+
+    @GetMapping("/index/dto")
+    public IndexResponseDto indexDto(@RequestParam("name") String name, @RequestParam("amount") int amount){
+        return new IndexResponseDto(name,amount);
     }
 }
