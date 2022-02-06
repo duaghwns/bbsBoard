@@ -1,20 +1,20 @@
 package com.duaghwns.bbsBoard.web;
 
 import com.duaghwns.bbsBoard.web.dto.IndexResponseDto;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class IndexController {
 
-    @GetMapping("/index")
+
+    @RequestMapping("/")
+    @ResponseBody
     public String index(){
-        return "indexdddddd";
+        return "views/index";
     }
 
-    @GetMapping("/index/dto")
+    @GetMapping("/dto")
     public IndexResponseDto indexDto(@RequestParam("name") String name, @RequestParam("amount") int amount){
-        return new IndexResponseDto(name,amount);
+        return new IndexResponseDto(name,amount+99);
     }
 }
