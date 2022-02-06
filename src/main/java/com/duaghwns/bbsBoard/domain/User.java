@@ -16,7 +16,7 @@ public class User {
 
     @Id
     @Column(name = "bbs_seq")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "USER_SEQ_GENERATOR")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_SEQ_GENERATOR")
     private int seq;
     @Column(name = "ID", length = 15, nullable = false)
     private String id;
@@ -33,7 +33,7 @@ public class User {
 
 
     @Builder
-    public User(String id, String nm,String pw, String nick, Date birth, String hp) {
+    public User(String id, String nm, String pw, String nick, Date birth, String hp) {
         this.id = id;
         this.nm = nm;
         this.pw = pw;
