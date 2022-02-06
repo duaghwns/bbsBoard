@@ -18,7 +18,7 @@ public class User {
     @Column(name = "bbs_seq")
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "USER_SEQ_GENERATOR")
     private int seq;
-    @Column(name = "ID", length = 15,nullable = false)
+    @Column(name = "ID", length = 15, nullable = false)
     private String id;
     @Column(name = "PW", length = 20, nullable = false)
     private String pw;
