@@ -16,7 +16,8 @@ public class User {
 
     @Id
     @Column(name = "bbs_seq")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_SEQ_GENERATOR")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,
+                    generator = "USER_SEQ_GENERATOR")
     private int seq;
     @Column(name = "ID", length = 15, nullable = false)
     private String id;
