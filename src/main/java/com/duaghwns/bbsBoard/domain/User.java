@@ -33,6 +33,7 @@ public class User {
     private String hp;
 
 
+
     @Builder
     public User(String id, String nm, String pw, String nick, Date birth, String hp) {
         this.id = id;
